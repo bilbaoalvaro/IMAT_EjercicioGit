@@ -1,4 +1,4 @@
-﻿
+
 using System;
 
 namespace IMAT_GitTest
@@ -15,26 +15,44 @@ namespace IMAT_GitTest
             return x * y;
         }
 
+        static int Subtract(int x, int y)
+        {
+            return x - y;
+        }
+
         static int Divide(int x, int y)
         {
+            if (y == 0)
+            {
+                throw new DivideByZeroException(
+                    "No se puede dividir entre cero."
+                );
+            }
+
             return x / y;
         }
+
         static void Main(string[] args)
         {
-            int primerDigito = 2; // Primer dígito de tu ID
-            int ultimoDigito = 3; // Último dígito de tu ID
+            int primerDigito = 2;
+            int ultimoDigito = 3;
 
-            Console.WriteLine($"Suma: {Add(primerDigito, ultimoDigito)}");
+            Console.WriteLine(
+                $"Suma: {Add(primerDigito, ultimoDigito)}"
+            );
 
-            int primerDigitoMultiplicacion = 2; // Primer dítido del ID de Comillas
-            int ultimoDigitoMultiplicacion = 2; // Último dígito del ID de Comillas
+            Console.WriteLine(
+                $"Multiplicación: {Multiply(primerDigito, ultimoDigito)}"
+            );
 
-            Console.WriteLine($"Multiplicación de {primerDigitoMultiplicacion} y {ultimoDigitoMultiplicacion}: {Multiply(primerDigitoMultiplicacion, ultimoDigitoMultiplicacion)}");
+            Console.WriteLine(
+                $"Resta: {Subtract(primerDigito, ultimoDigito)}"
+            );
 
-            int primerDigitoDivision = 2; // Primer dítido del ID de Comillas
-            int ultimoDigitoDivision = 2; // Último dígito del ID de Comillas
-
-            Console.WriteLine($"División de {primerDigitoDivision} y {ultimoDigitoDivision}: {Divide(primerDigitoDivision, ultimoDigitoDivision)}");
+            Console.WriteLine(
+                $"División: {Divide(primerDigito, ultimoDigito)}"
+            );
         }
     }
 }
+
