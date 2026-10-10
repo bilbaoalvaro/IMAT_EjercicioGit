@@ -14,6 +14,11 @@ namespace IMAT_GitTest
         {
             return x * y;
         }
+
+        static int Divide(int x, int y)
+        {
+            return x / y;
+        }
         static void Main(string[] args)
         {
             int primerDigito = 2; // Primer dígito de tu ID
@@ -25,6 +30,11 @@ namespace IMAT_GitTest
             int ultimoDigitoMultiplicacion = 2; // Último dígito del ID de Comillas
 
             Console.WriteLine($"Multiplicación de {primerDigitoMultiplicacion} y {ultimoDigitoMultiplicacion}: {Multiply(primerDigitoMultiplicacion, ultimoDigitoMultiplicacion)}");
+
+            int primerDigitoDivision = 2; // Primer dítido del ID de Comillas
+            int ultimoDigitoDivision = 2; // Último dígito del ID de Comillas
+
+            Console.WriteLine($"División de {primerDigitoDivision} y {ultimoDigitoDivision}: {Divide(primerDigitoDivision, ultimoDigitoDivision)}");
         }
     }
 }
