@@ -25,7 +25,7 @@ namespace IMAT_GitTest
             int ultimoDigito = 3; // Último dígito de tu ID
 
             Console.WriteLine(
-                $"Resta: {Subtract(primerDigito, ultimoDigito)}"
+                $"Resta:{Subtract(primerDigito, ultimoDigito)}"
             );
         }
     }
