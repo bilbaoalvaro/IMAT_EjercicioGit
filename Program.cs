@@ -1,4 +1,5 @@
-﻿using System;
+
+using System;
 
 namespace IMAT_GitTest
 {
@@ -19,14 +20,39 @@ namespace IMAT_GitTest
             return x - y;
         }
 
+        static int Divide(int x, int y)
+        {
+            if (y == 0)
+            {
+                throw new DivideByZeroException(
+                    "No se puede dividir entre cero."
+                );
+            }
+
+            return x / y;
+        }
+
         static void Main(string[] args)
         {
-            int primerDigito = 2; // Primer dígito de tu ID
-            int ultimoDigito = 3; // Último dígito de tu ID
+            int primerDigito = 2;
+            int ultimoDigito = 3;
 
             Console.WriteLine(
-                $"Resta:{Subtract(primerDigito, ultimoDigito)}"
+                $"Suma: {Add(primerDigito, ultimoDigito)}"
+            );
+
+            Console.WriteLine(
+                $"Multiplicación: {Multiply(primerDigito, ultimoDigito)}"
+            );
+
+            Console.WriteLine(
+                $"Resta: {Subtract(primerDigito, ultimoDigito)}"
+            );
+
+            Console.WriteLine(
+                $"División: {Divide(primerDigito, ultimoDigito)}"
             );
         }
     }
 }
+
